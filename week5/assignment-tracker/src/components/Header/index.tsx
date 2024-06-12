@@ -20,7 +20,8 @@ export function Header({ addAssignment }: HeaderProps) {
     return (
         <header className={styles.header}>
             <h1>BCIT Assignment Tracker</h1>
-            <form className={styles.newAssignmentForm} onSubmit={handleSubmit}>
+            {/* OnClick doesn't work with Enter key. onSubmit works!*/}
+            <form className={styles.newAssignmentForm} onSubmit={handleSubmit}> 
                 <input
                     placeholder="Add a new assignment"
                     type="text"
