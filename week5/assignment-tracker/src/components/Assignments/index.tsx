@@ -1,4 +1,3 @@
-import React, {useState} from "react";
 import styles from "./assignments.module.css";
 import { TAssignment } from "../../types";
 import { Assignment as AssignmentComponent } from "../Assignment";
