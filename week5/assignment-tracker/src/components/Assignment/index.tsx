@@ -1,27 +1,34 @@
 import styles from "./assignment.module.css";
 import { TbTrash } from "react-icons/tb";
 import { BsCheckCircleFill } from "react-icons/bs";
+import { TAssignment } from "../../types";
 
-type AssignmentProps = {
-    assignment: {
-        id: string;
-        title: string;
-        completed: boolean;
-    };
-    onDelete: () => void;
-    onToggleCompletion: () => void;
+type Props = {
+    assignment: TAssignment;
+    setAssignments: React.Dispatch<React.SetStateAction<TAssignment[]>>;
 };
 
-export function Assignment({
-    assignment,
-    onDelete,
-    onToggleCompletion,
-}: AssignmentProps) {
+export function Assignment({ assignment, setAssignments, }:Props) {
+    
+    const toggleCompletion = () => {
+        setAssignments(prevAssignments =>
+            prevAssignments.map(item =>
+                item.id === assignment.id ? { ...item, completed: !item.completed } : item
+            )
+        );
+    };
+
+    const deleteAssignment = () => {
+        setAssignments(prevAssignments =>
+            prevAssignments.filter(item => item.id !== assignment.id)
+        );
+    };
+
     return (
         <div className={styles.assignment}>
             <button
                 className={styles.checkContainer}
-                onClick={onToggleCompletion}
+                onClick={toggleCompletion}
             >
                 {assignment.completed ? (
                     <BsCheckCircleFill
@@ -34,10 +41,10 @@ export function Assignment({
             </button>
 
             <p className={assignment.completed ? styles.textCompleted : ""}>
-                {assignment.title}
+                {assignment.task}
             </p>
 
-            <button className={styles.deleteButton} onClick={onDelete}>
+            <button className={styles.deleteButton} onClick={deleteAssignment}>
                 <TbTrash size={20} />
             </button>
         </div>
