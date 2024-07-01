@@ -23,3 +23,5 @@ yarn-error.log*
 
 # ignore any file under a folder named with the suffix "_ignore"
 **/*_ignore/**
+#misc
+**/*starter/
