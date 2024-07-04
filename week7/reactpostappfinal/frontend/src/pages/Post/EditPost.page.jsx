@@ -17,7 +17,7 @@ export function EditPostPage() {
   });
 
   const handleSubmit = async (values) => {
-    const postId = values.id; // Assuming 'values' includes the post ID
+    const postId = post.id; // Assuming 'values' includes the post ID
     const res = await axios.put(`${DOMAIN}/api/posts/${postId}`, values);
     if (res?.data.success) {
       navigate(`/posts/${postId}`);
@@ -25,7 +25,6 @@ export function EditPostPage() {
       console.error('Failed to update the post.'); // Consider adding error handling
     }
   };
-  
 
   return (
     <Box maw={300} mx="auto">
@@ -63,8 +62,6 @@ export function EditPostPage() {
 }
 
 export const postEditLoader = async ({ params }) => {
-  const res = await axios.get(`${DOMAIN}/api/posts/` + params.id);
-  console.log("I ran!");
+  const res = await axios.get(`${DOMAIN}/api/posts/${params.id}`);
   return res.data;
 };
-

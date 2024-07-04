@@ -7,7 +7,7 @@ import {
   verifyUser,
   parseToken,
   addPost,
-  editPost,
+  updatePost,
   posts,
   sleep,
 } from "./fakedb";
@@ -73,15 +73,19 @@ app.post("/api/posts", (req, res) => {
 });
 
 app.put('/api/posts/:id', (req, res) => {
-  const { id } = req.params;
-  const postUpdates = req.body;
-  const foundIndex = posts.findIndex(post => post.id === parseInt(id));
-  if (foundIndex !== -1) {
-    posts[foundIndex] = { ...posts[foundIndex], ...postUpdates };
-    res.json({ success: true, message: 'Post updated successfully' });
-  } else {
-    res.status(404).json({ success: false, message: 'Post not found' });
+  const postId = Number(req.params.id);
+  const incomingPost = { ...req.body, id: postId };
+  try {
+    updatePost(incomingPost);
+    res.status(200).json({ success: true });
+  } catch (error) {
+    if (error instanceof Error) {
+      res.status(500).json({ error: error.message });
+    } else {
+      res.status(500).json({ error: "An unknown error occurred" });
+    }
   }
 });
+
 
 app.listen(port, () => console.log("Server is running"));
