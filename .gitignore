@@ -9,8 +9,10 @@ Ex_Files_React_js_EssT/
 
 # production
 build/
+prisma/
 
 # misc
+.env
 .DS_Store
 .env.local
 .env.development.local
