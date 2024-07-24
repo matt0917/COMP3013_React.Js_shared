@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 5, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/src/components/CodeEditor.tsx"],"sourcesContent":["\"use client\";\nimport { Editor } from \"@monaco-editor/react\";\n\nexport function CodeEditor({ existingCode }: any) {\n  function handleEditorChange(value: string | undefined) {\n    console.log(value);\n  }\n  return (\n    <Editor\n      height=\"90vh\"\n      defaultLanguage=\"javascript\"\n      defaultValue={existingCode}\n      onChange={handleEditorChange}\n    />\n  );\n}\n"],"names":[],"mappings":";;;;;;;;;;AAAA;;;AAGO,SAAS,WAAW,EAAE,YAAY,EAAO;IAC9C,SAAS,mBAAmB,KAAyB;QACnD,QAAQ,GAAG,CAAC;IACd;IACA,qBACE,wPAAC;QACC,QAAO;QACP,iBAAgB;QAChB,cAAc;QACd,UAAU;;;;;;AAGhB"}},
+    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 41, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/node_modules/next/src/server/future/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.ts"],"sourcesContent":["unable to read source [project]/node_modules/next/src/server/future/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.ts"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,yIAAiCC,QAAQ,CACxD,YACD,CAACC,kBAAkB"}},
+    {"offset": {"line": 43, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

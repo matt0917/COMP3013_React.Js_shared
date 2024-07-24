@@ -1,0 +1,45 @@
+{
+  "node": {
+    "ec6176c3a60e1ff8660145acd329c8f2c9a024a3": {
+      "workers": {
+        "app/blocks/[id]/edit/page": "[project]/.next-internal/server/app/blocks/[id]/edit/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript, action, ecmascript)\" } [app-rsc] (ecmascript)"
+      },
+      "layer": {
+        "app/blocks/[id]/edit/page": "actionBrowser"
+      }
+    },
+    "8bb2391d98487a1d1137cbeb5b4c52c2f793fb7f": {
+      "workers": {
+        "app/blocks/[id]/edit/page": "[project]/.next-internal/server/app/blocks/[id]/edit/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript, action, ecmascript)\" } [app-rsc] (ecmascript)"
+      },
+      "layer": {
+        "app/blocks/[id]/edit/page": "actionBrowser"
+      }
+    },
+    "4d25be3953eb8d38367fa774fb7814561f95bfd9": {
+      "workers": {
+        "app/blocks/[id]/edit/page": "[project]/.next-internal/server/app/blocks/[id]/edit/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript, action, ecmascript)\" } [app-rsc] (ecmascript)"
+      },
+      "layer": {
+        "app/blocks/[id]/edit/page": "actionBrowser"
+      }
+    },
+    "734f1b1e158ac432f1727cc3f6f03a1215be7017": {
+      "workers": {
+        "app/blocks/[id]/edit/page": "[project]/.next-internal/server/app/blocks/[id]/edit/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript, action, ecmascript)\" } [app-rsc] (ecmascript)"
+      },
+      "layer": {
+        "app/blocks/[id]/edit/page": "actionBrowser"
+      }
+    },
+    "4af92c3c7abc8a0dfea3d1677247381b8032c158": {
+      "workers": {
+        "app/blocks/[id]/edit/page": "[project]/.next-internal/server/app/blocks/[id]/edit/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript, action, ecmascript)\" } [app-rsc] (ecmascript)"
+      },
+      "layer": {
+        "app/blocks/[id]/edit/page": "actionBrowser"
+      }
+    }
+  },
+  "edge": {}
+}

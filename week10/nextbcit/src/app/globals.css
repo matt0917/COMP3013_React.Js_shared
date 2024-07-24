@@ -1,0 +1,47 @@
+@tailwind base;
+/* Import Tailwind's base styles. Typically used to reset or normalize default browser styles. */
+@tailwind components;
+/* Import Tailwind's component styles. Used to define reusable component styles. */
+@tailwind utilities;
+/* Import Tailwind's utility classes. Allows quick styling with various utility classes. */
+
+@layer base {
+  /* Define CSS variables for consistent styling across the project. */
+  :root {
+    --background: 0 0% 100%; /* Background color */
+    --foreground: 222.2 84% 4.9%; /* Foreground color */
+    --card: 0 0% 100%; /* Card background color */
+    --card-foreground: 222.2 84% 4.9%; /* Card foreground color */
+    --popover: 0 0% 100%; /* Popover background color */
+    --popover-foreground: 222.2 84% 4.9%; /* Popover foreground color */
+    --primary: 221.2 83.2% 53.3%; /* Primary color */
+    --primary-foreground: 210 40% 98%; /* Primary foreground color */
+    --secondary: 210 40% 96.1%; /* Secondary color */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Secondary foreground color */
+    --muted: 210 40% 96.1%; /* Muted color */
+    --muted-foreground: 215.4 16.3% 44%; /* Muted foreground color */
+    --accent: 210 40% 96.1%; /* Accent color */
+    --accent-foreground: 222.2 47.4% 11.2%; /* Accent foreground color */
+    --destructive: 0 72% 51%; /* Destructive action color (e.g., delete button) */
+    --destructive-foreground: 210 40% 98%; /* Destructive action foreground color */
+    --border: 214.3 31.8% 91.4%; /* Border color */
+    --input: 214.3 31.8% 91.4%; /* Input field color */
+    --ring: 221.2 83.2% 53.3%; /* Focus ring color */
+    --radius: 0.5rem; /* Border radius */
+  }
+}
+
+@layer base {
+  /* Apply basic styles to elements. */
+  * {
+    @apply border-border; /* Apply border style to all elements */
+  }
+
+  body {
+    @apply bg-background text-foreground font-body; /* Apply background color, text color, and font style to the body element */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading; /* Apply font style to all heading elements */
+  }
+}
